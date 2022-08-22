@@ -12,3 +12,6 @@ matlab/*.stl
 __pycache__
 .DS_Store
 /data
+/x.cpp
+/x.exe
+*.obj
