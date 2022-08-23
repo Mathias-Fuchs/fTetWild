@@ -22,3 +22,5 @@ __pycache__
 *.ipdb
 *.log
 *.pdb
+*.ilk
+*.idb

@@ -7,9 +7,6 @@
 
 int main()
 {
-
-
-
     floatTetWild::Parameters p;
 	Eigen::MatrixXd VO;
 	Eigen::MatrixXi TO;
