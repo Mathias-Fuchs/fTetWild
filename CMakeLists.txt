@@ -15,8 +15,14 @@ set(CMAKE_BUILD_TYPE RelWithDebInfo)
 set(LIBIGL_EIGEN_VERSION 3.4.0)
 set(LIBIGL_SKIP_DOWNLOAD ON)
 set(BUILD_TESTING OFF)
+            ## we want to build a shared library
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
+            ## we want to submit the solution file to source control for several (good) reasons.
+            ## and we don't want cmake to fight with us about it.
+set(CMAKE_SUPPRESS_REGENERATION true)
+            
+set(CMAKE_SKIP_INSTALL_ALL_DEPENDENCY true)            
 
 
 ################################################################################
