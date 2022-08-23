@@ -15,3 +15,10 @@ __pycache__
 /x.cpp
 /x.exe
 *.obj
+/simpleTest/x64/Release
+/simpleTest/simpleTest.tlog
+/simpleTest/simpleTest.exe.recipe
+*.iobj
+*.ipdb
+*.log
+*.pdb

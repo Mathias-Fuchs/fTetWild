@@ -210,15 +210,18 @@ namespace floatTetWild {
 		int              boolean_op = -1,
 		bool             skip_simplify = false) {
 
+		GEO::initialize();
 		GEO::vector<double> geovertices(surfaceVerts.size());
 		std::memcpy(geovertices.data(), surfaceVerts.data(), surfaceVerts.size() * sizeof(double));
 
 		GEO::vector<GEO::index_t> geotris(surfaceTris.size());
-		std::memcpy(geotris.data(), surfaceTris.data(), surfaceTris.size() * sizeof(size_t));
+//		static_assert(sizeof(GEO::index_t) == sizeof(size_t)); // fails, can't memcpy
+		for (int i = 0; i < surfaceTris.size(); i++)
+			geotris[i] = surfaceTris[i];
 
 		GEO::Mesh sfmesh;
 		sfmesh.vertices.set_double_precision();
-		sfmesh.facets.assign_triangle_mesh(3, geovertices, geotris, true);
+		sfmesh.facets.assign_triangle_mesh(3, geovertices, geotris, false);
 		return tetrahedralization(sfmesh, params, VO, TO, boolean_op, skip_simplify);
 	}
 
