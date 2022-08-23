@@ -8,6 +8,14 @@
       <Configuration>Debug</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="RelWithDebInfo|x64">
       <Configuration>RelWithDebInfo</Configuration>
       <Platform>x64</Platform>
@@ -27,6 +35,16 @@
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
@@ -34,7 +52,6 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
-    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -43,29 +60,25 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\Debug\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    </IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">FloatTetwild.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">FloatTetwild</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\Release\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    </IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">FloatTetwild.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">FloatTetwild</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\MinSizeRel\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
-    </IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">FloatTetwild.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">FloatTetwild</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\RelWithDebInfo\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
-    </IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">FloatTetwild.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">FloatTetwild</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
@@ -73,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\tbb\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Z77Pro/source/libraries/mpir/include" /external:I "C:/Users/Z77Pro/source/repos/inactive/fTetWild3/3rdparty/libigl/cmake/../include" /external:I "C:/Users/Z77Pro/source/repos/inactive/fTetWild3/3rdparty/libigl/cmake/../external/eigen" /external:I "C:/Users/Z77Pro/source/repos/inactive/fTetWild3/3rdparty/geogram/src/lib" /external:I "C:/Users/Z77Pro/source/repos/inactive/fTetWild3/3rdparty/json/include" /bigobj</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -88,19 +101,15 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;FLOAT_TETWILD_USE_TBB;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;__TBB_NO_IMPLICIT_LINKAGE=1;CMAKE_INTDIR="Debug";FloatTetwild_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR="Debug";FloatTetwild_EXPORTS</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;FLOAT_TETWILD_USE_TBB;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;__TBB_NO_IMPLICIT_LINKAGE=1;CMAKE_INTDIR=\"Debug\";FloatTetwild_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\tbb\include;C:\Users\Z77Pro\source\libraries\mpir\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR=\"Debug\";FloatTetwild_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\libraries\mpir\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
-    <MASM>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;FLOAT_TETWILD_USE_TBB;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;__TBB_NO_IMPLICIT_LINKAGE=1;CMAKE_INTDIR="Debug";FloatTetwild_EXPORTS</PreprocessorDefinitions>
-      <IncludePaths>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\tbb\include;C:\Users\Z77Pro\source\libraries\mpir\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\json\include;%(IncludePaths)</IncludePaths>
-    </MASM>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\tbb\include;C:\Users\Z77Pro\source\libraries\mpir\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\libraries\mpir\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -108,7 +117,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>lib\Debug\geogram.lib;C:\Users\Z77Pro\source\libraries\mpir\bin\mpir.lib;tbb\Debug\tbb_static.lib;predicates\Debug\predicates.lib;psapi.lib;3rdparty\fmt\Debug\fmtd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>lib\Debug\geogram.lib;C:\Users\Z77Pro\source\libraries\mpir\bin\mpir.lib;predicates\Debug\predicates.lib;psapi.lib;3rdparty\fmt\Debug\fmtd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -123,7 +132,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\tbb\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Z77Pro/source/libraries/mpir/include" /external:I "C:/Users/Z77Pro/source/repos/inactive/fTetWild3/3rdparty/libigl/cmake/../include" /external:I "C:/Users/Z77Pro/source/repos/inactive/fTetWild3/3rdparty/libigl/cmake/../external/eigen" /external:I "C:/Users/Z77Pro/source/repos/inactive/fTetWild3/3rdparty/geogram/src/lib" /external:I "C:/Users/Z77Pro/source/repos/inactive/fTetWild3/3rdparty/json/include" /bigobj</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -136,21 +145,17 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;FLOAT_TETWILD_USE_TBB;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;__TBB_NO_IMPLICIT_LINKAGE=1;CMAKE_INTDIR="Release";FloatTetwild_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR="Release";FloatTetwild_EXPORTS</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;FLOAT_TETWILD_USE_TBB;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;__TBB_NO_IMPLICIT_LINKAGE=1;CMAKE_INTDIR=\"Release\";FloatTetwild_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\tbb\include;C:\Users\Z77Pro\source\libraries\mpir\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR=\"Release\";FloatTetwild_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\libraries\mpir\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
-    <MASM>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;FLOAT_TETWILD_USE_TBB;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;__TBB_NO_IMPLICIT_LINKAGE=1;CMAKE_INTDIR="Release";FloatTetwild_EXPORTS</PreprocessorDefinitions>
-      <IncludePaths>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\tbb\include;C:\Users\Z77Pro\source\libraries\mpir\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\json\include;%(IncludePaths)</IncludePaths>
-    </MASM>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\tbb\include;C:\Users\Z77Pro\source\libraries\mpir\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\libraries\mpir\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -158,7 +163,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>lib\Release\geogram.lib;C:\Users\Z77Pro\source\libraries\mpir\bin\mpir.lib;tbb\Release\tbb_static.lib;predicates\Release\predicates.lib;psapi.lib;3rdparty\fmt\Release\fmt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>lib\Release\geogram.lib;C:\Users\Z77Pro\source\libraries\mpir\bin\mpir.lib;predicates\Release\predicates.lib;psapi.lib;3rdparty\fmt\Release\fmt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -173,7 +178,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\tbb\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Z77Pro/source/libraries/mpir/include" /external:I "C:/Users/Z77Pro/source/repos/inactive/fTetWild3/3rdparty/libigl/cmake/../include" /external:I "C:/Users/Z77Pro/source/repos/inactive/fTetWild3/3rdparty/libigl/cmake/../external/eigen" /external:I "C:/Users/Z77Pro/source/repos/inactive/fTetWild3/3rdparty/geogram/src/lib" /external:I "C:/Users/Z77Pro/source/repos/inactive/fTetWild3/3rdparty/json/include" /bigobj</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -186,21 +191,17 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;FLOAT_TETWILD_USE_TBB;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;__TBB_NO_IMPLICIT_LINKAGE=1;CMAKE_INTDIR="MinSizeRel";FloatTetwild_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR="MinSizeRel";FloatTetwild_EXPORTS</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;FLOAT_TETWILD_USE_TBB;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;__TBB_NO_IMPLICIT_LINKAGE=1;CMAKE_INTDIR=\"MinSizeRel\";FloatTetwild_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\tbb\include;C:\Users\Z77Pro\source\libraries\mpir\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR=\"MinSizeRel\";FloatTetwild_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\libraries\mpir\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
-    <MASM>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;FLOAT_TETWILD_USE_TBB;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;__TBB_NO_IMPLICIT_LINKAGE=1;CMAKE_INTDIR="MinSizeRel";FloatTetwild_EXPORTS</PreprocessorDefinitions>
-      <IncludePaths>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\tbb\include;C:\Users\Z77Pro\source\libraries\mpir\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\json\include;%(IncludePaths)</IncludePaths>
-    </MASM>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\tbb\include;C:\Users\Z77Pro\source\libraries\mpir\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\libraries\mpir\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -208,7 +209,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>lib\MinSizeRel\geogram.lib;C:\Users\Z77Pro\source\libraries\mpir\bin\mpir.lib;tbb\MinSizeRel\tbb_static.lib;predicates\MinSizeRel\predicates.lib;psapi.lib;3rdparty\fmt\MinSizeRel\fmt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>lib\MinSizeRel\geogram.lib;C:\Users\Z77Pro\source\libraries\mpir\bin\mpir.lib;predicates\MinSizeRel\predicates.lib;psapi.lib;3rdparty\fmt\MinSizeRel\fmt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -223,7 +224,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\tbb\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Z77Pro/source/libraries/mpir/include" /external:I "C:/Users/Z77Pro/source/repos/inactive/fTetWild3/3rdparty/libigl/cmake/../include" /external:I "C:/Users/Z77Pro/source/repos/inactive/fTetWild3/3rdparty/libigl/cmake/../external/eigen" /external:I "C:/Users/Z77Pro/source/repos/inactive/fTetWild3/3rdparty/geogram/src/lib" /external:I "C:/Users/Z77Pro/source/repos/inactive/fTetWild3/3rdparty/json/include" /bigobj</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -237,19 +238,15 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;FLOAT_TETWILD_USE_TBB;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;__TBB_NO_IMPLICIT_LINKAGE=1;CMAKE_INTDIR="RelWithDebInfo";FloatTetwild_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR="RelWithDebInfo";FloatTetwild_EXPORTS</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;FLOAT_TETWILD_USE_TBB;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;__TBB_NO_IMPLICIT_LINKAGE=1;CMAKE_INTDIR=\"RelWithDebInfo\";FloatTetwild_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\tbb\include;C:\Users\Z77Pro\source\libraries\mpir\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR=\"RelWithDebInfo\";FloatTetwild_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\libraries\mpir\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
-    <MASM>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;FLOAT_TETWILD_USE_TBB;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;__TBB_NO_IMPLICIT_LINKAGE=1;CMAKE_INTDIR="RelWithDebInfo";FloatTetwild_EXPORTS</PreprocessorDefinitions>
-      <IncludePaths>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\tbb\include;C:\Users\Z77Pro\source\libraries\mpir\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\json\include;%(IncludePaths)</IncludePaths>
-    </MASM>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\tbb\include;C:\Users\Z77Pro\source\libraries\mpir\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\Z77Pro\source\libraries\mpir\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\Z77Pro\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -257,7 +254,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>lib\RelWithDebInfo\geogram.lib;C:\Users\Z77Pro\source\libraries\mpir\bin\mpir.lib;tbb\RelWithDebInfo\tbb_static.lib;predicates\RelWithDebInfo\predicates.lib;psapi.lib;3rdparty\fmt\RelWithDebInfo\fmt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>lib\RelWithDebInfo\geogram.lib;C:\Users\Z77Pro\source\libraries\mpir\bin\mpir.lib;predicates\RelWithDebInfo\predicates.lib;psapi.lib;3rdparty\fmt\RelWithDebInfo\fmt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -386,6 +383,12 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Users\Z77Pro\source\repos\inactive\fTetWild3\src\external\Rational.h" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\ZERO_CHECK.vcxproj">
+      <Project>{A416CE7B-2868-3181-B52E-D3B81F02EF96}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\3rdparty\fmt\fmt.vcxproj">
       <Project>{D35661E5-4811-3529-8936-2979405B9577}</Project>
       <Name>fmt</Name>
@@ -401,6 +404,5 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
   </ImportGroup>
 </Project>
