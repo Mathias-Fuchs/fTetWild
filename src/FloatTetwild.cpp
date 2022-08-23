@@ -209,7 +209,7 @@ namespace floatTetWild {
 		Eigen::MatrixXi& TO,
 		int              boolean_op = -1,
 		bool             skip_simplify = false) {
-
+		if (surfaceVerts.size() == 0 || surfaceTris.size() == 0) return -2;
 		GEO::initialize();
 		GEO::vector<double> geovertices(surfaceVerts.size());
 		std::memcpy(geovertices.data(), surfaceVerts.data(), surfaceVerts.size() * sizeof(double));
