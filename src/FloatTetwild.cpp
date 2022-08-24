@@ -69,16 +69,16 @@ namespace floatTetWild {
 		}
 
 		stats().record(StateInfo::init_id, 0, input_vertices.size(), input_faces.size(), -1, -1);
-
-		/////////////////////////////////////////////////
-		// STEP 1: Preprocessing (mesh simplification) //
-		/////////////////////////////////////////////////
 		Mesh mesh;
 		mesh.params = params;
 
 		igl::Timer timer;
-
 		timer.start();
+
+		/////////////////////////////////////////////////
+		// STEP 1: Preprocessing (mesh simplification) //
+		/////////////////////////////////////////////////
+
 		simplify(input_vertices, input_faces, input_tags, tree, mesh.params, skip_simplify);
 		tree.init_b_mesh_and_tree(input_vertices, input_faces, mesh);
 		logger().info("preprocessing {}s", timer.getElapsedTimeInSec());
@@ -113,12 +113,12 @@ namespace floatTetWild {
 			-1,
 			-1);
 
-		/////////////////////
-		// STEP 3: Cutting //
-		/////////////////////
+		///////////////////////
+		//// STEP 3: Cutting //
+		///////////////////////
 
 		timer.start();
-		insert_triangles(input_vertices, input_faces, input_tags, mesh, is_face_inserted, tree, false);
+		 insert_triangles(input_vertices, input_faces, input_tags, mesh, is_face_inserted, tree, false);
 		logger().info("cutting {}s", timer.getElapsedTimeInSec());
 		logger().info("");
 		stats().record(StateInfo::cutting_id,
@@ -129,24 +129,24 @@ namespace floatTetWild {
 			mesh.get_avg_energy(),
 			std::count(is_face_inserted.begin(), is_face_inserted.end(), false));
 
-		//////////////////////////////////////
-		// STEP 4: Volume mesh optimization //
-		//////////////////////////////////////
+		////////////////////////////////////////
+		//// STEP 4: Volume mesh optimization //
+		////////////////////////////////////////
 
-		timer.start();
-		optimization(input_vertices, input_faces, input_tags, is_face_inserted, mesh, tree, { {1, 1, 1, 1} });
-		logger().info("mesh optimization {}s", timer.getElapsedTimeInSec());
-		logger().info("");
-		stats().record(StateInfo::optimization_id,
-			timer.getElapsedTimeInSec(),
-			mesh.get_v_num(),
-			mesh.get_t_num(),
-			mesh.get_max_energy(),
-			mesh.get_avg_energy());
+		//timer.start();
+		//optimization(input_vertices, input_faces, input_tags, is_face_inserted, mesh, tree, { {1, 1, 1, 1} });
+		//logger().info("mesh optimization {}s", timer.getElapsedTimeInSec());
+		//logger().info("");
+		//stats().record(StateInfo::optimization_id,
+		//	timer.getElapsedTimeInSec(),
+		//	mesh.get_v_num(),
+		//	mesh.get_t_num(),
+		//	mesh.get_max_energy(),
+		//	mesh.get_avg_energy());
 
-		/////////////////////////////////
-		// STEP 5: Interior extraction //
-		/////////////////////////////////
+		///////////////////////////////////
+		//// STEP 5: Interior extraction //
+		///////////////////////////////////
 
 		timer.start();
 		if (boolean_op < 0) {

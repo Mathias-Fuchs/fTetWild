@@ -59,26 +59,30 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\Debug\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">FloatTetwild.dir\Debug\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\..\AppData\Roaming\McNeel\Rhinoceros\packages\7.0\mfem.io\0.1.11633-27264-alpha</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    </IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">FloatTetwild</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\Release\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">FloatTetwild.dir\Release\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\..\AppData\Roaming\McNeel\Rhinoceros\packages\7.0\mfem.io\0.1.11633-27264-alpha</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    </IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">FloatTetwild</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\MinSizeRel\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">FloatTetwild.dir\MinSizeRel\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">..\..\..\..\..\AppData\Roaming\McNeel\Rhinoceros\packages\7.0\mfem.io\0.1.11633-27264-alpha</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    </IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">FloatTetwild</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Z77Pro\source\repos\inactive\fTetWild3\build\RelWithDebInfo\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">FloatTetwild.dir\RelWithDebInfo\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">..\..\..\..\..\AppData\Roaming\McNeel\Rhinoceros\packages\7.0\mfem.io\0.1.11633-27264-alpha</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    </IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">FloatTetwild</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
