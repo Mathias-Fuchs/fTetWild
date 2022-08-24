@@ -26,3 +26,4 @@ __pycache__
 *.idb
 *.swp
 /simpleTest/__tracked_surface.stl
+/simpleTest/obj/x64/Debug

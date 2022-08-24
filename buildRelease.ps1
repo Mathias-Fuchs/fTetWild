@@ -4,6 +4,7 @@ Push-Location
 [string] $source = "$HOME\source\repos\inactive\fTetWild3"
 [string] $ip =  "$HOME\source\libraries\ftetwild\bin\"   | Resolve-Path
 
+[string] $inc     = "$HOME\source\libraries\ftetwild\include\floattetwild\"   | Resolve-Path
 Set-Location $source
 
 MSBuild.exe ./build/FloatTetwild.vcxproj /p:Configuration=RelWithDebInfo
@@ -11,5 +12,6 @@ Copy-Item -Path build/RelWithDebInfo/FloatTetwild.dll -Destination "$ip" -Verbos
 Copy-Item -Path build/RelWithDebInfo/FloatTetwild.lib -Destination "$ip" -Verbose
 Copy-Item -Path build/RelWithDebInfo/FloatTetwild.pdb -Destination "$ip" -Verbose
 
+Copy-Item -Path src/FloatTetwild.h -Destination "$inc" -Verbose
 Pop-Location
 

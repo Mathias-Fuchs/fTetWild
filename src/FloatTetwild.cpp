@@ -6,6 +6,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 //
 
+
 #include <floattetwild/AABBWrapper.h>
 #include <floattetwild/FloatTetDelaunay.h>
 #include <floattetwild/MeshImprovement.h>
@@ -21,6 +22,9 @@
 #include <floattetwild/MeshIO.hpp>
 #include <floattetwild/Types.hpp>
 #include <fstream>
+
+// include the one from this directory with declspec(dllexport)
+#include "FloatTetwild.h"
 
 namespace floatTetWild {
 
@@ -199,32 +203,55 @@ namespace floatTetWild {
 		return 0;
 	}
 
+	int tetrahedralizationFlat(
+				size_t nvI,
+				const double* vI,
+				size_t ntI,
+				const size_t* tI,
+				void* params,
+				void** vo,
+				void** to,
+				int boolean_op,
+				int skip_simplify) {
 
+		if (nvI == 0 || ntI == 0) {
+			*vo = nullptr;
+			*to = nullptr;
+			return -2;
+		}
 
-	int __declspec(dllexport) tetrahedralizationFlat(
-		const std::vector<double>& surfaceVerts,
-		const std::vector<size_t>& surfaceTris,
-		Parameters       params,
-		Eigen::MatrixXd& VO,
-		Eigen::MatrixXi& TO,
-		int              boolean_op = -1,
-		bool             skip_simplify = false) {
-		if (surfaceVerts.size() == 0 || surfaceTris.size() == 0) return -2;
+		Eigen::MatrixXd* vop = new Eigen::MatrixXd;
+		Eigen::MatrixXi* top = new Eigen::MatrixXi;
+		// needs to be on the heap because we return their addresses
+		*vo = static_cast<void*>(vop);
+		*to = static_cast<void*>(top);
+
+		const Parameters* pi = reinterpret_cast<const Parameters*>(params);
 		GEO::initialize();
-		GEO::vector<double> geovertices(surfaceVerts.size());
-		std::memcpy(geovertices.data(), surfaceVerts.data(), surfaceVerts.size() * sizeof(double));
+		GEO::vector<double> geovertices(3 * nvI);
+		std::memcpy(geovertices.data(), vI, 3 * nvI * sizeof(double));
 
-		GEO::vector<GEO::index_t> geotris(surfaceTris.size());
+		GEO::vector<GEO::index_t> geotris(3 * ntI);
 //		static_assert(sizeof(GEO::index_t) == sizeof(size_t)); // fails, can't memcpy
-		for (int i = 0; i < surfaceTris.size(); i++)
-			geotris[i] = surfaceTris[i];
+		for (int i = 0; i < 3 * ntI; i++) geotris[i] = tI[i];
 
 		GEO::Mesh sfmesh;
 		sfmesh.vertices.set_double_precision();
 		sfmesh.facets.assign_triangle_mesh(3, geovertices, geotris, false);
-		return tetrahedralization(sfmesh, params, VO, TO, boolean_op, skip_simplify);
+		return tetrahedralization(sfmesh, *pi, *vop, *top, boolean_op, (bool) skip_simplify);
+
 	}
 
-
+	int tetrahedralizationClean(
+		void* v,
+		void* t
+	) {
+		if (!v || !t) return 1;
+		Eigen::MatrixXd* vp = static_cast<Eigen::MatrixXd*>(v);
+		Eigen::MatrixXi* tp =	 static_cast<Eigen::MatrixXi*>(t);
+		delete vp;
+		delete tp;
+		return 0;
+	}
 
 }  // namespace floatTetWild
