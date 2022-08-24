@@ -14,6 +14,13 @@
 
 #include <floattetwild/Parameters.h>
 
+
+#ifndef CAPIONLY
+#include <floattetwild/Types.hpp>
+#include <geogram/mesh/mesh.h>
+#include <Eigen/Dense>
+#endif
+
 namespace floatTetWild {
 
 
