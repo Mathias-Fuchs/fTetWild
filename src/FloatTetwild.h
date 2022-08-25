@@ -23,7 +23,6 @@
 
 namespace floatTetWild {
 
-
 #ifndef CAPIONLY
 	int tetrahedralization(GEO::Mesh& sf_mesh,
 		Parameters       params,
@@ -35,7 +34,11 @@ namespace floatTetWild {
 
 // C API
 	extern "C" {
-		int __declspec(dllexport) __cdecl tetrahedralizationFlat(
+		int
+#ifdef _WIN32
+		__declspec(dllexport) __cdecl 
+#endif
+		tetrahedralizationFlat(
 			size_t nvI,
 			const double* vI,
 			size_t ntI,
@@ -46,7 +49,11 @@ namespace floatTetWild {
 			int boolean_op,
 			int skip_simplify);
 
-		int __declspec(dllexport) __cdecl tetrahedralizationClean(
+		int
+#ifdef _WIN32
+		__declspec(dllexport) __cdecl 
+#endif
+		tetrahedralizationClean(
 			void* v,
 			void* t
 		);
