@@ -173,3 +173,12 @@ endif()
 # Other sources
 add_subdirectory(src)
 
+##########
+# extremely simple test
+##########
+add_executable(test
+	simpleTest/simpleTest.cpp
+	)
+target_link_libraries(test
+  ${PROJECT_NAME}
+  )
