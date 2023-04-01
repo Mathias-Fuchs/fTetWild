@@ -88,7 +88,7 @@ option(LIBIGL_WITH_OPENGL_GLFW_IMGUI "Use ImGui"                    OFF)
 option(LIBIGL_WITH_PNG               "Use PNG"                      OFF)
 option(LIBIGL_WITH_TETGEN            "Use Tetgen"                   OFF)
 option(LIBIGL_WITH_TRIANGLE          "Use Triangle"                 OFF)
-option(LIBIGL_WITH_PREDICATES        "Use exact predicates"         ON)
+option(LIBIGL_WITH_PREDICATES        "Use exact predicates"         OFF)
 option(LIBIGL_WITH_XML               "Use XML"                      OFF)
 
 # Sanitizers
@@ -132,9 +132,7 @@ target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_11)
 # endif()
 # target_compile_definitions(${PROJECT_NAME} PUBLIC -DEIGEN_STACK_ALLOCATION_LIMIT=8388608)
 
-if(FLOAT_TETWILD_WITH_SANITIZERS)
-	add_sanitizers(${PROJECT_NAME})
-endif()
+
 
 ################################################################################
 # Required libraries
@@ -149,7 +147,6 @@ target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC ${GMP_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME}
 	PUBLIC
 		igl::core
-		igl::predicates
 		geogram::geogram
 		spdlog::spdlog
 		Threads::Threads
