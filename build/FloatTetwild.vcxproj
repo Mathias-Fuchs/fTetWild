@@ -4,47 +4,20 @@
     <PreferredToolArchitecture>x64</PreferredToolArchitecture>
   </PropertyGroup>
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug|x64">
-      <Configuration>Debug</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|x64">
-      <Configuration>Release</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="MinSizeRel|x64">
-      <Configuration>MinSizeRel</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="RelWithDebInfo|x64">
       <Configuration>RelWithDebInfo</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{ECCB3064-B166-34D3-AF90-F44F975DA06D}</ProjectGuid>
+    <ProjectGuid>{BC0FF8FF-5AC4-366F-8718-504AE953FB15}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>FloatTetwild</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v143</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v143</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v143</PlatformToolset>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
@@ -59,177 +32,17 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\..\AppData\Roaming\McNeel\Rhinoceros\packages\7.0\trmesh\0.1.1789.1241</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    </IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">FloatTetwild</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\..\AppData\Roaming\McNeel\Rhinoceros\packages\7.0\trmesh\0.1.1789.1241</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    </IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">FloatTetwild</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">..\..\..\..\..\AppData\Roaming\McNeel\Rhinoceros\packages\7.0\trmesh\0.1.1789.1241</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
-    </IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">FloatTetwild</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">..\..\..\..\..\AppData\Roaming\McNeel\Rhinoceros\packages\7.0\trmesh\0.1.1789.1241</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
-    </IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Mathias\source\repos\inactive\fTetWild\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">FloatTetwild.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">FloatTetwild</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\mathias\source\repos\inactive\fTetWild3\build\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/mathias/source/libraries/mpir/include" /external:I "C:/Users/mathias/source/repos/inactive/fTetWild3/3rdparty/libigl/cmake/../include" /external:I "C:/Users/mathias/source/repos/inactive/fTetWild3/3rdparty/libigl/cmake/../external/eigen" /external:I "C:/Users/mathias/source/repos/inactive/fTetWild3/3rdparty/geogram/src/lib" /external:I "C:/Users/mathias/source/repos/inactive/fTetWild3/3rdparty/json/include" /bigobj</AdditionalOptions>
-      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
-      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <Optimization>Disabled</Optimization>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <UseFullPaths>false</UseFullPaths>
-      <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR="Debug";FloatTetwild_EXPORTS</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)</ObjectFileName>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR=\"Debug\";FloatTetwild_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\mathias\source\repos\inactive\fTetWild3\build\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\mathias\source\libraries\mpir\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>C:\Users\mathias\source\repos\inactive\fTetWild3\build\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\mathias\source\libraries\mpir\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
-    <Link>
-      <AdditionalDependencies>lib\Debug\geogram.lib;C:\Users\mathias\source\libraries\mpir\bin\mpir.lib;predicates\Debug\predicates.lib;psapi.lib;3rdparty\fmt\Debug\fmtd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/mathias/source/repos/inactive/fTetWild3/build/Debug/FloatTetwild.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/mathias/source/repos/inactive/fTetWild3/build/Debug/FloatTetwild.pdb</ProgramDataBaseFile>
-      <SubSystem>Console</SubSystem>
-    </Link>
-    <ProjectReference>
-      <LinkLibraryDependencies>false</LinkLibraryDependencies>
-    </ProjectReference>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\mathias\source\repos\inactive\fTetWild3\build\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/mathias/source/libraries/mpir/include" /external:I "C:/Users/mathias/source/repos/inactive/fTetWild3/3rdparty/libigl/cmake/../include" /external:I "C:/Users/mathias/source/repos/inactive/fTetWild3/3rdparty/libigl/cmake/../external/eigen" /external:I "C:/Users/mathias/source/repos/inactive/fTetWild3/3rdparty/geogram/src/lib" /external:I "C:/Users/mathias/source/repos/inactive/fTetWild3/3rdparty/json/include" /bigobj</AdditionalOptions>
-      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <Optimization>MaxSpeed</Optimization>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <UseFullPaths>false</UseFullPaths>
-      <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR="Release";FloatTetwild_EXPORTS</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat>
-      </DebugInformationFormat>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR=\"Release\";FloatTetwild_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\mathias\source\repos\inactive\fTetWild3\build\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\mathias\source\libraries\mpir\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>C:\Users\mathias\source\repos\inactive\fTetWild3\build\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\mathias\source\libraries\mpir\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
-    <Link>
-      <AdditionalDependencies>lib\Release\geogram.lib;C:\Users\mathias\source\libraries\mpir\bin\mpir.lib;predicates\Release\predicates.lib;psapi.lib;3rdparty\fmt\Release\fmt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
-      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/mathias/source/repos/inactive/fTetWild3/build/Release/FloatTetwild.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/mathias/source/repos/inactive/fTetWild3/build/Release/FloatTetwild.pdb</ProgramDataBaseFile>
-      <SubSystem>Console</SubSystem>
-    </Link>
-    <ProjectReference>
-      <LinkLibraryDependencies>false</LinkLibraryDependencies>
-    </ProjectReference>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
-    <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\mathias\source\repos\inactive\fTetWild3\build\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/mathias/source/libraries/mpir/include" /external:I "C:/Users/mathias/source/repos/inactive/fTetWild3/3rdparty/libigl/cmake/../include" /external:I "C:/Users/mathias/source/repos/inactive/fTetWild3/3rdparty/libigl/cmake/../external/eigen" /external:I "C:/Users/mathias/source/repos/inactive/fTetWild3/3rdparty/geogram/src/lib" /external:I "C:/Users/mathias/source/repos/inactive/fTetWild3/3rdparty/json/include" /bigobj</AdditionalOptions>
-      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
-      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <Optimization>MinSpace</Optimization>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <UseFullPaths>false</UseFullPaths>
-      <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR="MinSizeRel";FloatTetwild_EXPORTS</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat>
-      </DebugInformationFormat>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR=\"MinSizeRel\";FloatTetwild_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\mathias\source\repos\inactive\fTetWild3\build\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\mathias\source\libraries\mpir\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>C:\Users\mathias\source\repos\inactive\fTetWild3\build\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\mathias\source\libraries\mpir\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
-    <Link>
-      <AdditionalDependencies>lib\MinSizeRel\geogram.lib;C:\Users\mathias\source\libraries\mpir\bin\mpir.lib;predicates\MinSizeRel\predicates.lib;psapi.lib;3rdparty\fmt\MinSizeRel\fmt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
-      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/mathias/source/repos/inactive/fTetWild3/build/MinSizeRel/FloatTetwild.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/mathias/source/repos/inactive/fTetWild3/build/MinSizeRel/FloatTetwild.pdb</ProgramDataBaseFile>
-      <SubSystem>Console</SubSystem>
-    </Link>
-    <ProjectReference>
-      <LinkLibraryDependencies>false</LinkLibraryDependencies>
-    </ProjectReference>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\mathias\source\repos\inactive\fTetWild3\build\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/mathias/source/libraries/mpir/include" /external:I "C:/Users/mathias/source/repos/inactive/fTetWild3/3rdparty/libigl/cmake/../include" /external:I "C:/Users/mathias/source/repos/inactive/fTetWild3/3rdparty/libigl/cmake/../external/eigen" /external:I "C:/Users/mathias/source/repos/inactive/fTetWild3/3rdparty/geogram/src/lib" /external:I "C:/Users/mathias/source/repos/inactive/fTetWild3/3rdparty/json/include" /bigobj</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\Users\Mathias\source\repos\inactive\fTetWild\build\include;C:\Users\Mathias\source\repos\inactive\fTetWild\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Mathias\source\repos\inactive\fTetWild\3rdparty\libigl\external\predicates;C:\Users\Mathias\source\repos\inactive\fTetWild\build\predicates;\src\lib;C:\Users\Mathias\source\repos\inactive\fTetWild\3rdparty\spdlog\include;C:\Users\Mathias\source\repos\inactive\fTetWild\3rdparty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Mathias/source/libraries/mpir/include" /external:I "C:/Users/Mathias/source/repos/inactive/fTetWild/3rdparty/libigl/cmake/../include" /external:I "C:/Users/Mathias/source/repos/inactive/fTetWild/3rdparty/libigl/cmake/../external/eigen" /external:I "C:/Users/Mathias/source/repos/inactive/fTetWild/3rdparty/geogram/src/lib" /external:I "C:/Users/Mathias/source/repos/inactive/fTetWild/3rdparty/json/include" /bigobj</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -247,10 +60,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;LIBIGL_WITH_PREDICATES;_USE_MATH_DEFINES;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR=\"RelWithDebInfo\";FloatTetwild_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\mathias\source\repos\inactive\fTetWild3\build\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\mathias\source\libraries\mpir\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Mathias\source\repos\inactive\fTetWild\build\include;C:\Users\Mathias\source\repos\inactive\fTetWild\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Mathias\source\repos\inactive\fTetWild\3rdparty\libigl\external\predicates;C:\Users\Mathias\source\repos\inactive\fTetWild\build\predicates;\src\lib;C:\Users\Mathias\source\repos\inactive\fTetWild\3rdparty\spdlog\include;C:\Users\Mathias\source\repos\inactive\fTetWild\3rdparty\fmt\include;C:\Users\Mathias\source\libraries\mpir\include;C:\Users\Mathias\source\repos\inactive\fTetWild\3rdparty\libigl\cmake\..\include;C:\Users\Mathias\source\repos\inactive\fTetWild\3rdparty\libigl\cmake\..\external\eigen;C:\Users\Mathias\source\repos\inactive\fTetWild\3rdparty\geogram\src\lib;C:\Users\Mathias\source\repos\inactive\fTetWild\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\mathias\source\repos\inactive\fTetWild3\build\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\external\predicates;C:\Users\mathias\source\repos\inactive\fTetWild3\build\predicates;\src\lib;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\spdlog\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\fmt\include;C:\Users\mathias\source\libraries\mpir\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\include;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\libigl\cmake\..\external\eigen;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\geogram\src\lib;C:\Users\mathias\source\repos\inactive\fTetWild3\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Mathias\source\repos\inactive\fTetWild\build\include;C:\Users\Mathias\source\repos\inactive\fTetWild\3rdparty\libigl\cmake\..\external\predicates;C:\Users\Mathias\source\repos\inactive\fTetWild\3rdparty\libigl\external\predicates;C:\Users\Mathias\source\repos\inactive\fTetWild\build\predicates;\src\lib;C:\Users\Mathias\source\repos\inactive\fTetWild\3rdparty\spdlog\include;C:\Users\Mathias\source\repos\inactive\fTetWild\3rdparty\fmt\include;C:\Users\Mathias\source\libraries\mpir\include;C:\Users\Mathias\source\repos\inactive\fTetWild\3rdparty\libigl\cmake\..\include;C:\Users\Mathias\source\repos\inactive\fTetWild\3rdparty\libigl\cmake\..\external\eigen;C:\Users\Mathias\source\repos\inactive\fTetWild\3rdparty\geogram\src\lib;C:\Users\Mathias\source\repos\inactive\fTetWild\3rdparty\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -258,13 +71,13 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>lib\RelWithDebInfo\geogram.lib;C:\Users\mathias\source\libraries\mpir\bin\mpir.lib;predicates\RelWithDebInfo\predicates.lib;psapi.lib;3rdparty\fmt\RelWithDebInfo\fmt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>lib\RelWithDebInfo\geogram.lib;mpir.lib;predicates\RelWithDebInfo\predicates.lib;psapi.lib;3rdparty\fmt\RelWithDebInfo\fmt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/mathias/source/repos/inactive/fTetWild3/build/RelWithDebInfo/FloatTetwild.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/mathias/source/repos/inactive/fTetWild3/build/RelWithDebInfo/FloatTetwild.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/Mathias/source/repos/inactive/fTetWild/build/RelWithDebInfo/FloatTetwild.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Mathias/source/repos/inactive/fTetWild/build/RelWithDebInfo/FloatTetwild.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -272,74 +85,74 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\Logger.cpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\external\WindingNumber.h" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\AABBWrapper.h" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\AABBWrapper.cpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\auto_table.hpp" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\auto_table.cpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\CSGTreeParser.hpp" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\CSGTreeParser.cpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\LocalOperations.h" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\LocalOperations.cpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\EdgeSplitting.h" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\EdgeSplitting.cpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\EdgeCollapsing.h" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\EdgeCollapsing.cpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\EdgeSwapping.h" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\EdgeSwapping.cpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\VertexSmoothing.h" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\VertexSmoothing.cpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\MeshImprovement.h" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\MeshImprovement.cpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\FloatTetwild.h" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\FloatTetwild.cpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\FloatTetDelaunay.h" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\FloatTetDelaunay.cpp" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\TriangleInsertion.cpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\TriangleInsertion.h" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\CutMesh.cpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\CutMesh.h" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\intersections.h" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\intersections.cpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\Simplification.h" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\Simplification.cpp" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\Mesh.cpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\Mesh.hpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\MeshIO.hpp" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\MeshIO.cpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\Logger.hpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\Parameters.h" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\Types.hpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\Statistics.h" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\external\Predicates.cpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\external\Predicates.hpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\external\mesh_AABB.h" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\external\mesh_AABB.cpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\external\MshSaver.h" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\external\MshSaver.cpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\external\MshLoader.h" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\external\MshLoader.cpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\external\Exception.h" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\external\triangle_triangle_intersection.cpp" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\external\getRSS.c" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\external\get_mem.h" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\external\get_mem.cpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\external\bfs_orient.h" />
-    <ClCompile Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\external\bfs_orient.cpp" />
-    <ClInclude Include="C:\Users\mathias\source\repos\inactive\fTetWild3\src\external\Rational.h" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\Logger.cpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\external\WindingNumber.h" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\AABBWrapper.h" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\AABBWrapper.cpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\auto_table.hpp" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\auto_table.cpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\CSGTreeParser.hpp" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\CSGTreeParser.cpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\LocalOperations.h" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\LocalOperations.cpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\EdgeSplitting.h" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\EdgeSplitting.cpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\EdgeCollapsing.h" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\EdgeCollapsing.cpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\EdgeSwapping.h" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\EdgeSwapping.cpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\VertexSmoothing.h" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\VertexSmoothing.cpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\MeshImprovement.h" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\MeshImprovement.cpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\FloatTetwild.h" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\FloatTetwild.cpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\FloatTetDelaunay.h" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\FloatTetDelaunay.cpp" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\TriangleInsertion.cpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\TriangleInsertion.h" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\CutMesh.cpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\CutMesh.h" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\intersections.h" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\intersections.cpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\Simplification.h" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\Simplification.cpp" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\Mesh.cpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\Mesh.hpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\MeshIO.hpp" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\MeshIO.cpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\Logger.hpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\Parameters.h" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\Types.hpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\Statistics.h" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\external\Predicates.cpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\external\Predicates.hpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\external\mesh_AABB.h" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\external\mesh_AABB.cpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\external\MshSaver.h" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\external\MshSaver.cpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\external\MshLoader.h" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\external\MshLoader.cpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\external\Exception.h" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\external\triangle_triangle_intersection.cpp" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\external\getRSS.c" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\external\get_mem.h" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\external\get_mem.cpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\external\bfs_orient.h" />
+    <ClCompile Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\external\bfs_orient.cpp" />
+    <ClInclude Include="C:\Users\Mathias\source\repos\inactive\fTetWild\src\external\Rational.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\mathias\source\repos\inactive\fTetWild3\build\3rdparty\fmt\fmt.vcxproj">
-      <Project>{D35661E5-4811-3529-8936-2979405B9577}</Project>
+    <ProjectReference Include="C:\Users\Mathias\source\repos\inactive\fTetWild\build\3rdparty\fmt\fmt.vcxproj">
+      <Project>{475B6F9C-D1FD-3EB4-AE99-D02B383BCB01}</Project>
       <Name>fmt</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\mathias\source\repos\inactive\fTetWild3\build\geogram\src\lib\geogram\geogram.vcxproj">
-      <Project>{DC916420-6E71-3848-8765-1932431835E0}</Project>
+    <ProjectReference Include="C:\Users\Mathias\source\repos\inactive\fTetWild\build\geogram\src\lib\geogram\geogram.vcxproj">
+      <Project>{A7895BE4-1053-337B-9F29-55F2F08952E7}</Project>
       <Name>geogram</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\mathias\source\repos\inactive\fTetWild3\build\predicates\predicates.vcxproj">
-      <Project>{4DD71DC2-F052-3711-9E2C-4491DDA69337}</Project>
+    <ProjectReference Include="C:\Users\Mathias\source\repos\inactive\fTetWild\build\predicates\predicates.vcxproj">
+      <Project>{2C112C14-BC30-3B99-B0C5-A9A1EFE64F40}</Project>
       <Name>predicates</Name>
     </ProjectReference>
   </ItemGroup>
