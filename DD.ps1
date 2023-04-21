@@ -1,7 +1,7 @@
 
 Push-Location
 
-[string] $source = "$HOME\source\repos\inactive\fTetWild3"
+[string] $source = "$HOME\source\repos\inactive\fTetWild"
 [string] $ip     = "$HOME\source\libraries\ftetwild\bin\"   | Resolve-Path
 
 [string] $inc     = "$HOME\source\libraries\ftetwild\include\floattetwild\"   | Resolve-Path

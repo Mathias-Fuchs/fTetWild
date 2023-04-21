@@ -9,12 +9,12 @@
 #pragma once
 
 // To set the parameters related
-#include <floattetwild/Types.hpp>
+#include "Types.hpp"
 
 #include <array>
 #include <vector>
 
-#include <geogram/mesh/mesh.h>
+// #include <geogram/mesh/mesh.h>
 
 namespace floatTetWild {
     class Parameters {
@@ -71,7 +71,7 @@ namespace floatTetWild {
         int stage = 2;
 #endif
 
-        unsigned int num_threads = std::numeric_limits<unsigned int>::max();
+        unsigned int num_threads = 4; // std::numeric_limits<unsigned int>::max();
 
         int stop_p = -1;
 

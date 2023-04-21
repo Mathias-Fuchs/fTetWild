@@ -3,7 +3,7 @@ Push-Location
 
 
 [string] $invaliddir = "$home\source\repos\isInvalid" | Resolve-Path
-[string] $source = "$HOME\source\repos\inactive\fTetWild3" | Resolve-Path
+[string] $source = "$HOME\source\repos\inactive\fTetWild" | Resolve-Path
 [string] $ip =  "$HOME\source\libraries\ftetwild\bin\"   | Resolve-Path
 [string] $inc     = "$HOME\source\libraries\ftetwild\include\floattetwild\"   | Resolve-Path
 
