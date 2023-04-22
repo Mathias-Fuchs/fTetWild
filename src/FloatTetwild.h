@@ -6,18 +6,56 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 //
 
+
+// // C API by Mathias Fuchs, 2022
+
+
 #pragma once
 
-#include <floattetwild/Parameters.h>
-#include <floattetwild/Logger.hpp>
+#include "Parameters.h"
+
+
+#ifndef CAPIONLY
+#include <floattetwild/Types.hpp>
+#include <geogram/mesh/mesh.h>
+#include <Eigen/Dense>
+#endif
 
 namespace floatTetWild {
 
-int tetrahedralization(GEO::Mesh&       sf_mesh,
-                       Parameters       params,
-                       Eigen::MatrixXd& VO,
-                       Eigen::MatrixXi& TO,
-                       int              boolean_op    = -1,
-                       bool             skip_simplify = false);
+#ifndef CAPIONLY
+	int tetrahedralization(GEO::Mesh& sf_mesh,
+		Parameters       params,
+		Eigen::MatrixXd& VO,
+		Eigen::MatrixXi& TO,
+		int              boolean_op = -1,
+		bool             skip_simplify = false);
+#endif
 
+// C API
+	extern "C" {
+		int
+#ifdef _WIN32
+		__declspec(dllexport) __cdecl 
+#endif
+		tetrahedralizationFlat(
+			size_t nvI,
+			const double* vI,
+			size_t ntI,
+			const size_t* tI,
+			void* params,
+			void** vo,
+			void** to,
+			int boolean_op,
+			int skip_simplify);
+
+		int
+#ifdef _WIN32
+		__declspec(dllexport) __cdecl 
+#endif
+		tetrahedralizationClean(
+			void* v,
+			void* t
+		);
+	}
 }

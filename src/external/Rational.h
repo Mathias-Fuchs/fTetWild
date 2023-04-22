@@ -9,7 +9,11 @@
 #ifndef TRIWILD_RATIONAL_H
 #define TRIWILD_RATIONAL_H
 
+#ifdef _WIN32
 #include <mpir.h>
+#else
+#include <gmp.h>
+#endif
 #include <iostream>
 
 namespace triwild {

@@ -6,7 +6,23 @@
 ### mpir.lib linken
 ### überall mit runtime multithreaded dll .
 ### shared ist hier eingetragen bei der Library
+## download eigen 3.4.0 and place it in the libigl/external folder
 
+## set the following variables in the cmake-gui:
+
+
+set(CMAKE_BUILD_TYPE RelWithDebInfo)
+set(LIBIGL_EIGEN_VERSION 3.4.0)
+set(LIBIGL_SKIP_DOWNLOAD ON)
+set(BUILD_TESTING OFF)
+            ## we want to build a shared library
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
+            ## we want to submit the solution file to source control for several (good) reasons.
+            ## and we don't want cmake to fight with us about it.
+set(CMAKE_SUPPRESS_REGENERATION true)
+            
+set(CMAKE_SKIP_INSTALL_ALL_DEPENDENCY true)            
 
 
 ################################################################################
@@ -51,7 +67,7 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 ################################################################################
 
 # FloatTetwild options
-option(FLOAT_TETWILD_ENABLE_TBB         "Enable TBB"                    ON)
+option(FLOAT_TETWILD_ENABLE_TBB         "Enable TBB"                    OFF)
 option(FLOAT_TETWILD_USE_FLOAT          "Use floats instead of double"  OFF)
 option(FLOAT_TETWILD_WITH_SANITIZERS    "Use sanitizers"                OFF)
 option(FLOAT_TETWILD_WITH_EXACT_ENVELOPE    "Use exact envelope"        OFF)
@@ -137,10 +153,8 @@ target_link_libraries(${PROJECT_NAME}
 		geogram::geogram
 		spdlog::spdlog
 		Threads::Threads
-#		fast_winding_number
 		json
 		${GMP_LIBRARIES}
-		# ${MPFR_LIBRARIES}
 )
 if(FLOAT_TETWILD_ENABLE_TBB)
 	target_link_libraries(${PROJECT_NAME} PUBLIC tbb::tbb)
@@ -152,37 +166,6 @@ if(FLOAT_TETWILD_WITH_EXACT_ENVELOPE)
 	target_compile_definitions(${PROJECT_NAME} PUBLIC NEW_ENVELOPE)
 endif()
 
-
-################################################################################
-# FloatTetwild binary
-################################################################################
-
-# Main executable
-if(FLOAT_TETWILD_TOPLEVEL_PROJECT)
-	add_executable(${PROJECT_NAME}_bin src/main.cpp)
-	target_compile_features(${PROJECT_NAME}_bin PUBLIC ${CXX14_FEATURES})
-
-	target_link_libraries(${PROJECT_NAME}_bin
-		PUBLIC
-			${PROJECT_NAME}
-			CLI11::CLI11
-			warnings::all
-	)
-
-	if(TARGET igl::tetgen)
-		target_link_libraries(${PROJECT_NAME} PUBLIC igl::tetgen)
-		target_compile_definitions(${PROJECT_NAME} PUBLIC -DLIBIGL_WITH_TETGEN)
-	endif()
-
-	if(FLOAT_TETWILD_WITH_SANITIZERS)
-		add_sanitizers(${PROJECT_NAME}_bin)
-	endif()
-
-	if(NOT (${CMAKE_VERSION} VERSION_LESS "3.6.0"))
-		set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${PROJECT_NAME}_bin)
-	endif()
-endif()
-
 ################################################################################
 # Subdirectories
 ################################################################################
@@ -190,10 +173,12 @@ endif()
 # Other sources
 add_subdirectory(src)
 
-# Compile extras only if this is a top-level project
-if(FLOAT_TETWILD_TOPLEVEL_PROJECT)
-	# Unit tests
-	include(CTest)
-	enable_testing()
-	add_subdirectory(tests)
-endif()
+##########
+# extremely simple test
+##########
+add_executable(test
+	simpleTest/simpleTest.cpp
+	)
+target_link_libraries(test
+  ${PROJECT_NAME}
+  )
