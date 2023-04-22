@@ -43,8 +43,8 @@ endfunction()
 ## Catch2
 function(float_tetwild_download_catch2)
     float_tetwild_download_project(Catch2
-        URL          https://github.com/catchorg/Catch2/archive/v2.4.2.tar.gz
-        URL_MD5      26927b878b1f42633f15a9ef1c4bd8e7
+        URL          https://github.com/catchorg/Catch2/archive/refs/tags/v3.1.1.tar.gz
+        URL_MD5      1f3e0d8c3297252f77d643ff06d058cb
     )
 endfunction()
 
@@ -91,8 +91,10 @@ endfunction()
 ## Geogram LGPL
 function(float_tetwild_download_geogram)
     float_tetwild_download_project(geogram
-        GIT_REPOSITORY   https://github.com/polyfem/geogram.git
-        GIT_TAG          e6b9612f1146370e40deaa341b4dd7ef90502102
+#        GIT_REPOSITORY   https://github.com/polyfem/geogram.git
+#        GIT_TAG          e6b9612f1146370e40deaa341b4dd7ef90502102
+            GIT_REPOSITORY https://github.com/Yixin-Hu/geogram
+            GIT_TAG        b613750341a6cdd31ae8df80ecfc26ac7ca1a6ad
     )
 endfunction()
 
