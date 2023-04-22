@@ -3,6 +3,10 @@
 # GMP_INCLUDE_DIRS - the GMP include directory
 # GMP_LIBRARIES - Libraries needed to use GMP
 if (WIN32)
+
+	set(GMP_INC "C:/Users/mathias/libraries/mpir/include")
+	set(GMP_LIB "C:/Users/mathias/source/libraries/mpir/bin")
+
   MESSAGE(STATUS "GMP environment variables: " $ENV{GMP_INC} " " $ENV{GMP_LIB} )
   find_path(GMP_INCLUDE_DIRS NAMES mpir.h PATHS $ENV{GMP_INC} ${GMP_WINDOWS_PATH})
   find_library(GMP_LIBRARIES NAMES mpir PATHS $ENV{GMP_LIB} ${GMP_WINDOWS_PATH})
