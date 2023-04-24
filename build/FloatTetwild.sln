@@ -41,8 +41,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "geogram_third_party", "geog
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "predicates", "predicates\predicates.vcxproj", "{2C112C14-BC30-3B99-B0C5-A9A1EFE64F40}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "uninstall", "geogram\uninstall.vcxproj", "{2F313BD1-7306-3FB6-9252-76FB904A4EC6}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		RelWithDebInfo|x64 = RelWithDebInfo|x64
@@ -62,7 +60,6 @@ Global
 		{4C79BCB5-8ACB-36BA-806C-97389351FB24}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
 		{2C112C14-BC30-3B99-B0C5-A9A1EFE64F40}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
 		{2C112C14-BC30-3B99-B0C5-A9A1EFE64F40}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
-		{2F313BD1-7306-3FB6-9252-76FB904A4EC6}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,13 +8,20 @@
 
 #pragma once
 
+// due to some VS hiccup, another include guard
+#ifndef FTWPARAMS
+#define FTWPARAMS
+
+
 // To set the parameters related
 #include "Types.hpp"
 
 #include <array>
 #include <vector>
+#include <iostream>
 
 // #include <geogram/mesh/mesh.h>
+
 
 namespace floatTetWild {
     class Parameters {
@@ -162,3 +169,4 @@ namespace floatTetWild {
         }
     };
 }  // namespace floatTetWild
+#endif

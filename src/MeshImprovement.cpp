@@ -1521,38 +1521,7 @@ void floatTetWild::boolean_operation(Mesh& mesh, const json& csg_tree_with_ids, 
         }
     }
     else {
-        std::vector<std::vector<Vector3>>  Vs;
-        std::vector<std::vector<Vector3i>> Fs;
-
-        Vs.resize(meshes.size());
-        Fs.resize(meshes.size());
-
-        GEO::Mesh        tmp_mesh;
-        std::vector<int> tmp_tags;
-
-        for (int i = 0; i < meshes.size(); ++i) {
-            const auto& m = meshes[i];
-            if (!MeshIO::load_mesh(m, Vs[i], Fs[i], tmp_mesh, tmp_tags)) {
-                logger().error("unable to open {} file", m);
-                return;
-            }
-        }
-
-        for (int i = 0; i <= max_id; ++i) {
-            Eigen::Matrix<Scalar, Eigen::Dynamic, 3> vs(Vs[i].size(), 3);
-            Eigen::Matrix<int, Eigen::Dynamic, 3>    fs(Fs[i].size(), 3);
-            for (int k = 0; k < vs.rows(); ++k)
-                vs.row(k) = Vs[i][k];
-            for (int k = 0; k < fs.rows(); ++k)
-                fs.row(k) = Fs[i][k];
-
-//            if (!mesh.params.use_general_wn)
-//                floatTetWild::fast_winding_number(
-//                  Eigen::MatrixXd(vs.cast<double>()), Eigen::MatrixXi(fs), C, w[i]);
-//            else
-                igl::winding_number(
-                  Eigen::MatrixXd(vs.cast<double>()), Eigen::MatrixXi(fs), C, w[i]);
-        }
+        std::cerr << "This is a build without IO";
     }
 
     boolean_operation(mesh, csg_tree_with_ids, w);

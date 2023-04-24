@@ -4,7 +4,7 @@
 ### als library publizieren
 ### mpir.h statt gmp.h benutzen
 ### mpir.lib linken
-### überall mit runtime multithreaded dll .
+### überall mit runtime multithreaded dll -> eintragen in den Project-Settings.
 ### shared ist hier eingetragen bei der Library
 ## download eigen 3.4.0 and place it in the libigl/external folder
 
@@ -17,7 +17,6 @@ set(LIBIGL_SKIP_DOWNLOAD ON)
 set(BUILD_TESTING OFF)
             ## we want to build a shared library
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
-
             ## we want to submit the solution file to source control for several (good) reasons.
             ## and we don't want cmake to fight with us about it.
 set(CMAKE_SUPPRESS_REGENERATION true)
@@ -105,7 +104,7 @@ include(FloatTetwildDependencies)
 
 find_package(GMPfTetWild)
 IF(NOT ${GMP_FOUND})
-	MESSAGE(FATAL_ERROR "Cannot find GMP")
+	MESSAGE(FATAL_ERROR "Cannot find mpir")
 ENDIF()
 
 # find_package(MPFR)

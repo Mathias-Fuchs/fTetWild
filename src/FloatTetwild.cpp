@@ -23,8 +23,6 @@
 #include <floattetwild/Types.hpp>
 #include <fstream>
 
-// include the one from this directory with declspec(dllexport)
-#include "FloatTetwild.h"
 
 namespace floatTetWild {
 
@@ -32,7 +30,7 @@ namespace floatTetWild {
 	int tetrahedralization(
 		GEO::Mesh& sf_mesh,
 		Parameters       params,
-		Eigen::MatrixXd& V,
+		Eigen::MatrixXd& V ,
 		Eigen::MatrixXi& T,
 		int              boolean_op,
 		bool             skip_simplify)
@@ -226,7 +224,7 @@ namespace floatTetWild {
 		*vo = static_cast<void*>(vop);
 		*to = static_cast<void*>(top);
 
-		const Parameters* pi = reinterpret_cast<const Parameters*>(params);
+		Parameters* pi = reinterpret_cast<Parameters*>(params);
 		GEO::initialize();
 		GEO::vector<double> geovertices(3 * nvI);
 		std::memcpy(geovertices.data(), vI, 3 * nvI * sizeof(double));
@@ -248,7 +246,7 @@ namespace floatTetWild {
 	) {
 		if (!v || !t) return 1;
 		Eigen::MatrixXd* vp = static_cast<Eigen::MatrixXd*>(v);
-		Eigen::MatrixXi* tp =	 static_cast<Eigen::MatrixXi*>(t);
+		Eigen::MatrixXi* tp = static_cast<Eigen::MatrixXi*>(t);
 		delete vp;
 		delete tp;
 		return 0;
