@@ -23,6 +23,9 @@
 
 namespace floatTetWild {
 
+
+	// CAPIONLY is defined when including this library from somewhere else
+	// and undefined when building this library
 #ifndef CAPIONLY
 	int tetrahedralization(GEO::Mesh& sf_mesh,
 		Parameters       params,
@@ -37,6 +40,7 @@ namespace floatTetWild {
 		int
 #ifdef _WIN32
 		__declspec(dllexport) __cdecl 
+			#pragma error("WIR SIND HIER")
 #endif
 		tetrahedralizationFlat(
 			size_t nvI,
