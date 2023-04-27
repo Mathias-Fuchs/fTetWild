@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.5.33530.505
-MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CMakePredefinedTargets", "CMakePredefinedTargets", "{727B2970-7B24-38A8-BE65-6DC8B77929B5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GEOGRAM", "GEOGRAM", "{B7A4487E-D212-3780-87AE-D7D54EA07986}"
@@ -14,6 +12,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ALL_BUILD", "ALL_BUILD.vcxp
 		{A7895BE4-1053-337B-9F29-55F2F08952E7} = {A7895BE4-1053-337B-9F29-55F2F08952E7}
 		{4C79BCB5-8ACB-36BA-806C-97389351FB24} = {4C79BCB5-8ACB-36BA-806C-97389351FB24}
 		{2C112C14-BC30-3B99-B0C5-A9A1EFE64F40} = {2C112C14-BC30-3B99-B0C5-A9A1EFE64F40}
+		{3C86C726-22B2-3B01-B3BC-B5B9B02C9CFC} = {3C86C726-22B2-3B01-B3BC-B5B9B02C9CFC}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FloatTetwild", "FloatTetwild.vcxproj", "{BC0FF8FF-5AC4-366F-8718-504AE953FB15}"
@@ -24,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FloatTetwild", "FloatTetwil
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "INSTALL", "INSTALL.vcxproj", "{231557F1-E327-33B6-B902-49CF703946AA}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PACKAGE", "PACKAGE.vcxproj", "{6B004978-6ECB-3408-B808-15FC81015D85}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -31,6 +32,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PACKAGE", "PACKAGE.vcxproj"
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fmt", "3rdparty\fmt\fmt.vcxproj", "{475B6F9C-D1FD-3EB4-AE99-D02B383BCB01}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "geogram", "geogram\src\lib\geogram\geogram.vcxproj", "{A7895BE4-1053-337B-9F29-55F2F08952E7}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -38,8 +41,24 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "geogram", "geogram\src\lib\
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "geogram_third_party", "geogram\src\lib\geogram\third_party\geogram_third_party.vcxproj", "{4C79BCB5-8ACB-36BA-806C-97389351FB24}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "predicates", "predicates\predicates.vcxproj", "{2C112C14-BC30-3B99-B0C5-A9A1EFE64F40}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test.vcxproj", "{3C86C726-22B2-3B01-B3BC-B5B9B02C9CFC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BC0FF8FF-5AC4-366F-8718-504AE953FB15} = {BC0FF8FF-5AC4-366F-8718-504AE953FB15}
+		{475B6F9C-D1FD-3EB4-AE99-D02B383BCB01} = {475B6F9C-D1FD-3EB4-AE99-D02B383BCB01}
+		{A7895BE4-1053-337B-9F29-55F2F08952E7} = {A7895BE4-1053-337B-9F29-55F2F08952E7}
+		{2C112C14-BC30-3B99-B0C5-A9A1EFE64F40} = {2C112C14-BC30-3B99-B0C5-A9A1EFE64F40}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "uninstall", "geogram\uninstall.vcxproj", "{2F313BD1-7306-3FB6-9252-76FB904A4EC6}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,9 +79,9 @@ Global
 		{4C79BCB5-8ACB-36BA-806C-97389351FB24}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
 		{2C112C14-BC30-3B99-B0C5-A9A1EFE64F40}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
 		{2C112C14-BC30-3B99-B0C5-A9A1EFE64F40}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
+		{3C86C726-22B2-3B01-B3BC-B5B9B02C9CFC}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
+		{3C86C726-22B2-3B01-B3BC-B5B9B02C9CFC}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
+		{2F313BD1-7306-3FB6-9252-76FB904A4EC6}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4A7B012F-BF91-3F94-A834-67A34FA9FC52} = {727B2970-7B24-38A8-BE65-6DC8B77929B5}
@@ -73,5 +92,7 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AC9643E4-A431-3F76-94B3-BA966AAC0966}
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
 	EndGlobalSection
 EndGlobal

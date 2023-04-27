@@ -20,7 +20,7 @@
 
 #include <floattetwild/LocalOperations.h>
 #include <floattetwild/MeshImprovement.h>
-#include <floattetwild/MeshIO.hpp>
+// #include <floattetwild/MeshIO.hpp>
 
 namespace floatTetWild {
 	namespace {

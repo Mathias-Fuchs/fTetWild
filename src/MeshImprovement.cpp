@@ -14,7 +14,7 @@
 #include <floattetwild/EdgeSwapping.h>
 #include <floattetwild/VertexSmoothing.h>
 #include <floattetwild/Parameters.h>
-#include <floattetwild/MeshIO.hpp>
+// #include <floattetwild/MeshIO.hpp>
 //#include <floattetwild/FastWindingNumber.hpp>
 #include <floattetwild/CSGTreeParser.hpp>
 

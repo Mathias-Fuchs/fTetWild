@@ -44,8 +44,6 @@ set(SOURCES
 	Mesh.cpp
 	Mesh.hpp
 
-	MeshIO.hpp
-	MeshIO.cpp
 
 	Logger.hpp
 	Logger.cpp

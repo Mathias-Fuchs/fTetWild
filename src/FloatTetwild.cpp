@@ -19,7 +19,7 @@
 #include <geogram/mesh/mesh_repair.h>
 #include <igl/Timer.h>
 #include <floattetwild/Logger.hpp>
-#include <floattetwild/MeshIO.hpp>
+// #include <floattetwild/MeshIO.hpp>
 #include <floattetwild/Types.hpp>
 #include <fstream>
 

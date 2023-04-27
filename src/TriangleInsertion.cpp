@@ -14,7 +14,7 @@
 
 #include <floattetwild/LocalOperations.h>
 #include <floattetwild/Predicates.hpp>
-#include <floattetwild/MeshIO.hpp>
+// #include <floattetwild/MeshIO.hpp>
 #include <floattetwild/auto_table.hpp>
 #include <floattetwild/Logger.hpp>
 #include <floattetwild/intersections.h>

@@ -9,7 +9,7 @@
 #include <floattetwild/CSGTreeParser.hpp>
 
 #include <floattetwild/Logger.hpp>
-#include <floattetwild/MeshIO.hpp>
+// #include <floattetwild/MeshIO.hpp>
 
 #include <geogram/mesh/mesh_reorder.h>
 

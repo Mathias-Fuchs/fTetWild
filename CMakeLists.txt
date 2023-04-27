@@ -20,7 +20,7 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
             ## we want to submit the solution file to source control for several (good) reasons.
             ## and we don't want cmake to fight with us about it.
 set(CMAKE_SUPPRESS_REGENERATION true)
-            
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreadedDLL")
 set(CMAKE_SKIP_INSTALL_ALL_DEPENDENCY true)            
 
 
@@ -143,6 +143,8 @@ endif()
 
 target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC ${GMP_INCLUDE_DIRS})
 
+## TODO: which variable stores the path to the library's stub library file, in the cmake bs lingo?
+target_link_directories(${PROJECT_NAME} PUBLIC "C:/Users/mathias/source/libraries/mpir/bin")
 target_link_libraries(${PROJECT_NAME}
 	PUBLIC
 		igl::core
